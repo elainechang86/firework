@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>啟用</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="back" style="width: 100vw; height: 100vh; margin: 0; padding: 0; background-image: url('./assets/back.webp');
+        background-size: 100% 100%; text-align: center; position: fixed; z-index: 1;">
+    </div>
+    <img class="firework" autoplay
+        style="opacity: 0; height: 100vh;width: 100vw; margin: 0; padding: 0; z-index: 99; top: 0; left: 0; position: fixed;"
+        src="./assets/fireworks.gif"></video>
+    <div class="main" style="width: 100vw; height: 100vh; margin: 0; padding: 0; background-color: transparent; z-index: 999;
+    text-align: center; position: fixed;">
+        <div class="button">
+            <div class="outer-ring">
+                <!-- <div class="inner-ring"> -->
+                <img src="./assets/power.png" class="inner-ring">
+                <!-- </div> -->
+            </div>
+        </div>
+        <img class="tech-cadran" src="./assets/tech1.png" style="filter: brightness(0) invert(1);">
+        <img class="tech-cadran3" src="./assets/tech4.png" style="filter: brightness(0) invert(1);">
+        <img class="tech-cadran2" src="./assets/tech2.png" style="filter: brightness(0) invert(1);">
+    </div>
+
+</body>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .back {
+        -webkit-animation: breathing 5s infinite;
+        animation: breathing 5s infinite;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    @keyframes breathing {
+        0% {
+            filter: brightness(20%);
+        }
+
+        25% {
+            filter: brightness(40%);
+        }
+
+        60% {
+            filter: brightness(80%);
+        }
+
+        100% {
+            filter: brightness(10%);
+        }
+    }
+
+    .button {
+        width: 15vw;
+        height: 15vw;
+        margin: 0;
+        position: absolute;
+        left: calc(50% - 7.5vw);
+        top: calc(50% - 7.5vw);
+        cursor: pointer;
+        z-index: 1;
+        border-radius: 100%;
+        box-shadow: 0px 0px 10px 0px rgba(11, 161, 159, 0.4);
+        background: rgba(255, 255, 255, 1);
+        background: -moz-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 70%, rgba(229, 229, 232, 1) 100%);
+        background: -webkit-gradient(radial, center center, 0px, center center, 100%, , color-stop(0%, rgba(255, 255, 255, 1)), color-stop(70%, rgba(246, 246, 246, 1)), color-stop(100%, rgba(229, 229, 232, 1)));
+        background: -webkit-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 70%, rgba(229, 229, 232, 1) 100%);
+        background: -o-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 70%, rgba(229, 229, 232, 1) 100%);
+        background: -ms-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 70%, rgba(229, 229, 232, 1) 100%);
+        background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 70%, rgba(229, 229, 232, 1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e5e5e8', GradientType=1);
+
+        box-shadow:
+            inset 0 0 100px #fff, inset 20px 0 80px #94f1b9, inset -20px 0 80px #0ff, inset 20px 0 300px #8d8cdb, inset -20px 0 300px #0ff, 0 0 50px #fff, -10px 0 80px #02f, 10px 0 80px #0ff
+    }
+
+    .outer-ring {
+        width: 12vw;
+        height: 12vw;
+        position: absolute;
+        top: 1.6vw;
+        left: 1.6vw;
+        z-index: 2;
+        border-radius: 100%;
+        background: linear-gradient(45deg, rgb(149 192 205) 0%, rgb(29 93 173) 100%);
+        /* background: linear-gradient(45deg, rgba(211, 245, 255, 1) 0%, rgba(11, 161, 158, 1) 100%); */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d3f5ff', endColorstr='#0ba19e', GradientType=1);
+    }
+
+    .inner-ring {
+        width: 10vw;
+        height: 10vw;
+        position: absolute;
+        top: 1vw;
+        left: 1vw;
+        z-index: 3;
+        border-radius: 100%;
+        background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 42%, rgba(179, 179, 179, 1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#b3b3b3', GradientType=1);
+    }
+
+    .inner-ring::before {
+        /* content: "";*/
+        position: absolute;
+        top: 15px;
+        left: 25px;
+        z-index: 4;
+        /*border-top: 25px solid transparent;
+        border-bottom: 25px solid transparent;
+        border-left: 40px solid rgba(11, 161, 159, .8); */
+    }
+
+    img.tech-cadran3 {
+        width: 40vw;
+        height: 40vw;
+        transition: all 1s;
+        margin: auto;
+        position: absolute;
+        left: calc(50% - 20vw);
+        top: calc(50% - 20vw);
+    }
+
+    img.tech-cadran,
+    img.tech-cadran2 {
+        width: 42vw;
+        height: 42vw;
+        transition: all 1s;
+        margin: auto;
+        position: absolute;
+        left: calc(50% - 21vw);
+        top: calc(50% - 21vw);
+    }
+
+    /*  ====================================
+                  EVENTS
+    ====================================  */
+    .firework.out {
+        animation-name: out;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+        animation-delay: 3s;
+
+    }
+
+    .back.off {
+        -moz-animation-name: none;
+        -webkit-animation-name: none;
+        -ms-animation-name: none;
+        animation-name: none;
+        filter: brightness(20%);
+    }
+
+    .button.active {
+        animation-name: disapear;
+        animation-duration: 4s;
+        animation-fill-mode: forwards;
+    }
+
+    img.tech-cadran2.active {
+        /* transform: rotate(235deg) scale(1.5); */
+        animation-name: explode-to-small3;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+    }
+
+    img.tech-cadran.active {
+        /* transform: rotate(-180deg) scale(1.5); */
+        animation-name: explode-to-small2;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+    }
+
+    img.tech-cadran3.active {
+        /* transform: rotate(-90deg) scale(1.5); */
+        animation-name: explode-to-small;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes disapear {
+        0% {
+            transform: scale(1);
+        }
+
+        5% {
+            transform: scale(2);
+        }
+
+        8% {
+            transform: scale(2);
+        }
+
+        /* 60% {
+            transform: scale(1.5);
+        } */
+        100% {
+            transform: scale(0);
+        }
+    }
+
+    @keyframes explode-to-small {
+        0% {
+            transform: rotate(0) scale(1);
+        }
+
+        30% {
+            transform: rotate(120deg) scale(1.8);
+        }
+
+        /* 60% {
+            transform: rotate(235deg) scale(1.5);
+        } */
+        100% {
+            transform: rotate(500deg) scale(0);
+        }
+    }
+
+    @keyframes explode-to-small2 {
+        0% {
+            transform: rotate(0) scale(1);
+        }
+
+        30% {
+            transform: rotate(-200deg) scale(1.8);
+        }
+
+        /* 60% {
+            transform: rotate(235deg) scale(1.5);
+        } */
+        100% {
+            transform: rotate(-500deg) scale(0);
+        }
+    }
+
+    @keyframes explode-to-small3 {
+        0% {
+            transform: rotate(0) scale(1);
+        }
+
+        30% {
+            transform: rotate(-30deg) scale(1.8);
+        }
+
+        /* 60% {
+            transform: rotate(235deg) scale(1.5);
+        } */
+        100% {
+            transform: rotate(-500deg) scale(0);
+        }
+    }
+
+    @keyframes out {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .back.active,
+    .main.active {
+        animation-name: disapear2;
+        animation-duration: 1s;
+        animation-delay: 2.5s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes disapear2 {
+        0% {
+            filter: opacity(1);
+        }
+
+        100% {
+            filter: opacity(0) brightness(0);
+        }
+    }
+</style>
+
+<script>
+    /*  ====================================
+               TOGGLECLASSES
+    ====================================  */
+    $('.button').click(function () {
+        $('.back').css('animation', 'none');
+        $('.tech-cadran').addClass('active');
+        $('.tech-cadran2').addClass('active');
+        $('.tech-cadran3').addClass('active');
+        $('.button').addClass('active');
+        $('.back').addClass('active');
+        $('.main').addClass('active');
+        $('.firework').addClass('out');
+        $(".firework")[0].play();
+    });
+</script>
